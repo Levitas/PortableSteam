@@ -34,7 +34,7 @@
         /// <returns></returns>
         public GetOwnedGamesBuilder GetOwnedGames(SteamIdentity identity)
         {
-            return new GetOwnedGamesBuilder(new GetOwnedGamesRequest(this.Key) { SteamID = identity.AccountID });
+            return new GetOwnedGamesBuilder(new GetOwnedGamesRequest(this.Key) { SteamID = identity.SteamID });
         }
         /// <summary>
         /// Get recently played games for player.
