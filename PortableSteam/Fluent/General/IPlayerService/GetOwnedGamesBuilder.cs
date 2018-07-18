@@ -16,7 +16,6 @@
         /// Whether or not to include additional details of apps - name and images.
         /// </summary>
         /// <returns></returns>
-        [Obsolete("No longer appears to be supported by Steam.")]
         public GetOwnedGamesBuilder IncludeAppInfo()
         {
             this.Request.IncludeAppInfo = true;
@@ -27,10 +26,9 @@
         /// Whether or not to list free-to-play games in the results.
         /// </summary>
         /// <returns></returns>
-        [Obsolete("No longer appears to be supported by Steam.")]
         public GetOwnedGamesBuilder IncludePlayedFreeGames()
         {
-            this.Request.IncludeAppInfo = true;
+            this.Request.IncludePlayedFreeGames = true;
             return this;
         }
 
