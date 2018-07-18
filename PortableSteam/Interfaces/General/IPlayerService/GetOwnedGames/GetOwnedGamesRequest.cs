@@ -17,8 +17,12 @@
         {
             var parameters = base.GetParameterList();
             parameters.Add("steamid", SteamID);
-            parameters.Add("include_appinfo", IncludeAppInfo);
-            parameters.Add("include_played_free_games", IncludePlayedFreeGames);
+            string IncludeAppInfoString = "0";
+			if (IncludeAppInfo == true) { IncludeAppInfoString = "1"; }// converting True/False to 1 or 0 for the steam api
+			string IncludePlayedFreeGamesString = "0";
+			if (IncludePlayedFreeGames == true) { IncludePlayedFreeGamesString = "1"; }
+			parameters.Add("include_appinfo", IncludeAppInfoString);
+            parameters.Add("include_played_free_games", IncludePlayedFreeGamesString);
             return parameters;
         }
     }
